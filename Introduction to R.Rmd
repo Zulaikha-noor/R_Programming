@@ -56,6 +56,9 @@ print(mtrx)
 
 
 ```{r }
+##5. Assign names to the variables.
+dimnames(mtrx) <- list(c("Row1","Row2","Row3"),c("Column1","Column2","Column3"))
+mtrx
 #### End solution ####
 ```
 
@@ -116,22 +119,27 @@ unclass(cat_var)
 
 
 ```{r }
-
+## 1. Create a data frame object called bank_customers :
+bank_customers <- data.frame(CustomerID=c("Alicia","Nancy","Fernando","Louis","Diane"),hasAccount=c(FALSE,TRUE,TRUE,TRUE,FALSE),totalBalance=c(NA,10000,000.00,2000,NA))
+bank_customers
 ```
 
 
 ```{r }
-
+## Print number of rows
+nrow(bank_customers)
 ```
 
 
 ```{r }
-
+## Print number of columns
+ncol(bank_customers)
 ```
 
 
 ```{r }
-
+## Print names 
+names(bank_customers)
 ```
 
 
