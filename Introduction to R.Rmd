@@ -1,6 +1,6 @@
 ---
 title: "Introduction to R Programming"
-author: "Sana Rasheed"
+author: "Zulaikha Noor"
 date: "May 14, 2020"
 output: html_document
 ---
@@ -28,22 +28,30 @@ output: html_document
 
 
 ```{r }
+## 1. A vector containing each letter of your first name as its elements.
+myfirstname <- c("Z","u","l","a","i","k","h","a")
+print(myfirstname)
+```
+
+
+```{r }
+##  A variable that contains your name concatenated from the vector created in (1)
+paste(myfirstname, collapse = "")
 
 ```
 
 
 ```{r }
-
+## 3. A variable containing a sequence from 100 to 120.
+var_seq <- 100:120
+var_seq
 ```
 
 
 ```{r }
-
-```
-
-
-```{r }
-
+## 4. Create a matrix of 3x3 dimensions that contains the even sequence of numbers starting from 2.
+mtrx <- matrix(2:10,nrow = 3,ncol = 3)
+print(mtrx)
 ```
 
 
@@ -64,16 +72,23 @@ output: html_document
 
 
 ```{r }
+## Containing the categorical variables: Employed, Unemployed, Self-Employed, with each level appearing atleast more than 2.
+
+cat_var <- factor(c("Employed","Employed","Un-Employed","Self-Employed","Employed","Un-Employed","Self-Employed"),levels = c("Employed","Un-Employed","Self-Employed"))
+cat_var
+```
+
+
+```{r }
+## 2. Display the levels and the factor variable as a table.
+table(cat_var)
 
 ```
 
 
 ```{r }
-
-```
-
-
-```{r }
+## 3. Unclass the elements of the factor variable. 
+unclass(cat_var)
 
 ```
 
