@@ -166,17 +166,57 @@ names(bank_customers)
 
 
 ```{r }
-
+## Create a variable containing a sequence of numbers from 1 to 100:
+v <- 1:100
+print(v)
 ```
 
 
 ```{r }
-
+## Iterate over the variables and print those numbers which are prime.
+for(x in v){
+  if(x==1){
+    next
+  } else if(x==2){
+    x==2
+  } else if(x%%2==0){
+    next
+  } else if(x==3){
+    x==3
+  } else if(x%%3==0){
+    next
+  } else if(x==5){
+    x==5
+  } else if(x%%5==0){
+    next
+  } else if(x==7){
+    x==7
+  } else if(x%%7==0){
+    next
+  }
+  print(x)
+}
 ```
 
 
 ```{r }
-
+# create a variable var with a value of 1:
+count <- 0
+goal <- 10
+var <- 1
+while(count<goal){
+  var <- var+1
+  isprime <- TRUE
+  for(i in 2:(var%/%2)){
+    if(var%%i==0 && var!=2 && var!=3){
+      isprime <-FALSE
+    }
+  }
+  if(isprime){
+    count<-count+1
+    print(paste("#",count,"prime number is",var,sep=" "))
+  }
+}
 ```
 
 
@@ -205,12 +245,20 @@ names(bank_customers)
 
 
 ```{r }
-
+## Create a matrix of size 3x3 called mat_1:
+mat_1 <- matrix(1:9,nrow = 3,ncol = 3)
+mat_1
 ```
 
 
 ```{r }
-
+## 1. Iterate over all the values one by one and print the element as well as the position in the matrix (row, col):
+for(i in seq_len(nrow(mat_1))){
+  for(j in seq_len(ncol(mat_1))){
+    print(mat_1[i,j])
+    print(which(mat_1==mat_1[i,j], arr.ind=TRUE))
+  }
+}
 ```
 
 
