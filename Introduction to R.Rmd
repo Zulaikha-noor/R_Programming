@@ -298,12 +298,26 @@ for(i in seq_len(nrow(mat_1))){
 
 
 ```{r }
-
+## Create a function called gcd that finds the greatest common divisor of two numbers a and b:
+gcd <- function(a,b){
+  if(b > a){
+    min_num = b
+  } 
+  else {
+    min_num = a
+  }
+  for(i in 1:min_num+1){
+    if(a%%i==0 && b%%i==0)
+      answer = i
+  }
+  return(answer)
+}
 ```
 
 
 ```{r }
-
+answer <- gcd(28,36)
+answer
 ```
 
 
@@ -340,17 +354,26 @@ for(i in seq_len(nrow(mat_1))){
 
 
 ```{r }
+## Create a function called allConditionsMeet, that checks whether two expressions evaluate to true:
+
+allConditionsMeet <- function(a,b){
+  if(a==TRUE && b==TRUE){
+    return(TRUE)
+  } else {
+    FALSE
+  }
+}
 
 ```
 
 
 ```{r }
-
+allConditionsMeet(TRUE,FALSE)
 ```
 
 
 ```{r }
-
+allConditionsMeet(TRUE,TRUE)
 ```
 
 
