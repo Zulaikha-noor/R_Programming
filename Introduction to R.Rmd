@@ -425,7 +425,7 @@ matrix_2
 
 ```{r }
 ## perform element wise multiplication:
-matrix_1*matrix_2
+
 
 # element wise matrix cannot be performed as both matrices are of different dimensions
 ```
@@ -471,27 +471,38 @@ det_mat(my_mat)
 
 
 ```{r }
+## Use the current date and time and store them into variables curr_date and curr_time respectively: [use sys]
+curr_date <- Sys.Date()
+curr_date
 
 ```
 
 
 ```{r }
-
+curr_time <- Sys.time()
+curr_time
 ```
 
 
 ```{r }
-
+## Convert both into date and time objects using the appropriate functions.
+d <- as.POSIXlt(curr_date)
+d
 ```
 
 
 ```{r }
-
+t <- as.POSIXlt(curr_time)
+t
 ```
 
 
 ```{r }
-
+## Print the weekday, year, second and hour using the appropriate function and variables.
+t$wday
+t$year
+t$sec
+t$hour
 ```
 
 
@@ -511,17 +522,22 @@ det_mat(my_mat)
 
 
 ```{r }
-
+## Create a variable to store current date/time
+x <- as.POSIXlt((Sys.time()))
+x
 ```
 
 
 ```{r }
-
+## Create another variable that stores and set the timezone as GMT-5
+y <- strptime("2022-09-28 18:33:02","%Y-%m-%d %H:%M:%S",tz="GMT")
+y
 ```
 
 
 ```{r }
-
+## Find the difference between your current time and the GMT-5 timezone.
+x - y
 ```
 
 
