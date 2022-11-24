@@ -410,27 +410,44 @@ allConditionsMeet(TRUE,TRUE)
 
 
 ```{r }
+## Create two matrices matrix_1 and matrix_2 of dimensions 2x3 and 3x2:
+matrix_1 <- matrix(c(5,8,9,16,18,20) ,nrow = 2,ncol = 3)
+matrix_2 <- matrix(rep(5,6),nrow = 3,ncol=2)
 
+matrix_1
 ```
 
 
 ```{r }
-
+matrix_2
 ```
 
 
 ```{r }
+## perform element wise multiplication:
+matrix_1*matrix_2
 
+# element wise matrix cannot be performed as both matrices are of different dimensions
 ```
 
 
 ```{r }
-
+## perform matrix multiplication :
+matrix_1 %*% matrix_2
 ```
 
 
 ```{r }
+## create a 2x2 matrix my_mat:
+my_mat <- matrix(c(2,4,6,8),nrow = 2,ncol = 2)
 
+## Write a function to find the determinant of the matrix.
+det_mat <- function(a){
+  d <- det(a)
+  return(d)
+}
+
+det_mat(my_mat)
 ```
 
 
