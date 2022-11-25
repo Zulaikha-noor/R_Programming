@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R Programming"
 author: "Zulaikha Noor"
-date: "May 14, 2020"
+date: "November 25, 2022"
 output: html_document
 ---
 
@@ -687,27 +687,29 @@ head(Orange)
 
 
 ```{r }
-
+split_data <- split(Orange, Orange$circumference)
+split_data
 ```
 
 
 ```{r }
-
+split_data$"30"
 ```
 
 
 ```{r }
-
+split_data$"75"
 ```
 
 
 ```{r }
-
+a <- split_data[c("30","214")]
+a
 ```
 
 
 ```{r }
-
+sapply(a, function(x) colMeans(x[,c("age","circumference")], na.rm = TRUE))
 ```
 
 
