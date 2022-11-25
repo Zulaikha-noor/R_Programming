@@ -499,10 +499,10 @@ t
 
 ```{r }
 ## Print the weekday, year, second and hour using the appropriate function and variables.
-t$wday
-t$year
-t$sec
-t$hour
+print(paste("weekday", t$wday))
+print(paste("year :",t$year))
+print(paste("seconds :",t$sec))
+print(paste("hour :",t$hour))
 ```
 
 
@@ -571,27 +571,41 @@ x - y
 
 
 ```{r }
-
+## Create a sequence of numbers from 100 to 150 store in a variable called numbers.
+numbers <- list(100:150)
+numbers
 ```
 
 
 ```{r }
+lapply(numbers,mean)
+sapply(numbers,mean)
 
+lapply(numbers,sd)
+sapply(numbers,sd)
 ```
 
 
 ```{r }
+## to apply the "apply" function, we need to convert the sequence into the matrix:
+numbers <- matrix(c(101:150),nrow = 5,ncol = 10)
+numbers
 
+apply(numbers,1,mean)
+apply(numbers,1,sd)
 ```
 
 
 ```{r }
-
+## to apply the "tapply" function, we need to create an index named "t":
+t <- gl(2,25)
+t
 ```
 
 
 ```{r }
-
+tapply(numbers,t,mean)
+tapply(numbers,t,sd)
 ```
 
 
@@ -611,27 +625,31 @@ x - y
 
 
 ```{r }
-
+## Create a matrix of dimensions 4x4:
+mtrx <- matrix(1:16,nrow = 4,ncol = 4)
+mtrx
 ```
 
 
 ```{r }
-
+row_wise_mean <- apply(mtrx,1,mean)
+column_wise_mean <- apply(mtrx,2,mean)
 ```
 
 
 ```{r }
-
+row_wise_mean
+column_wise_mean
 ```
 
 
 ```{r }
-
+print(paste(row_wise_mean))
 ```
 
 
 ```{r }
-
+print(paste(column_wise_mean))
 ```
 
 
